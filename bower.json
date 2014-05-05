@@ -1,14 +1,15 @@
 {
-	"name": "bower-template",
+	"name": "map",
 	"version": "0.0.1",
-	"description": "bower-template",
+	"description": "map",
 	"author": {
 		"name": "Nik Butenko",
 		"email": "nik@butenko.me"
 	},
 	"main": [
-		"js/myModule.js",
-		"html/container.html"
+		"js/vendor/geo.js",
+		"js/init.js",
+		"js/map.js"
 	],
 	"private": true,
 	"ignore": [
@@ -21,10 +22,11 @@
 		"jquery": "~2.1.0",
 		"underscore": "~1.6.0",
 		"requirejs": "~2.1.11",
-		"requirejs-text": "~2.0.12",
-		"require-css": "~0.1.2"
+		"requirejs-plugins": "~1.0.2"
 	},
 	"devDependencies": {
+		"core": "nkbt/js-core",
+		"storage": "nkbt/storage",
 		"chai": "~1.9.1",
 		"mocha": "~1.18.2"
 	}

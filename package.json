@@ -1,7 +1,7 @@
 {
-	"name": "bower-template",
+	"name": "map",
 	"version": "0.0.1",
-	"description": "bower-template",
+	"description": "map",
 	"private": true,
 	"author": {
 		"name": "Nik Butenko",
@@ -19,7 +19,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:nkbt/bower-template.git"
+		"url": "git@github.com:nkbt/map.git"
 	},
 	"dependencies": {},
 	"devDependencies": {

@@ -4,6 +4,7 @@
 	require.config({
 		baseUrl: '../js',
 		paths: {
+			bwr: '../bower',
 			underscore: '../bower/underscore/underscore',
 			dom: '../bower/jquery/dist/jquery',
 
@@ -11,8 +12,14 @@
 			mocha: '../bower/mocha/mocha',
 			chai: '../bower/chai/chai',
 
-			'myModule': '../js/myModule',
-			'myModule/html': '../html'
+			'lib/app': '../bower/core/js/app',
+
+			'lib/storage': '../bower/storage/js/storage',
+			'vendor/storage-polyfill': '../bower/storage/js/vendor/storage-polyfill',
+			'entity/from-json': '../bower/storage/js/entity/from-json',
+
+			'lib/map': 'init',
+			'map': 'map'
 		},
 		shim: {
 			underscore: {
@@ -30,8 +37,12 @@
 		},
 		map: {
 			'*': {
-				'css': '../bower/require-css/css',
-				'txt': '../bower/requirejs-text/text'
+				'vendor/require/async': 'bwr/requirejs-plugins/src/async'
+			}
+		},
+		config: {
+			'lib/app': {
+				debug: true
 			}
 		}
 	});
@@ -42,7 +53,8 @@
 		mocha.ui('bdd');
 		window.expect = chai.expect;
 		require([
-			'test/lib/myModule'
+			'test/lib/init',
+			'test/lib/map'
 		], function () {
 			if (window.mochaPhantomJS) {
 				mochaPhantomJS.run();
