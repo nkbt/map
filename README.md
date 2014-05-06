@@ -1,4 +1,10 @@
-bower-template
+nkbt/map
 =================
 
-Template to be used to create Bower modules
+Google map abstraction
+
+
+Installation
+-
+
+    bower install --save nkbt/map
